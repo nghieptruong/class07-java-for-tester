@@ -2,7 +2,7 @@ package javabasic;
 
 public class DemoSameClass {
     public static void main(String[] args) {
-        BaseHouse baseHouse = new BaseHouse();
+        GeneralHouse baseHouse = new GeneralHouse();
     }
 }
 class BaseHouse {

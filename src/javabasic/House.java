@@ -1,20 +1,27 @@
 package javabasic;
 
-public class House {
+public class House extends GeneralHouse {
 
     //mac dinh la gan gia tri mac dinh
     //kieu so: int, float, double,short <--gan 0
     //kieu String: null
     //kieu boolean: false
-    private int bedRoom; // thuoc tinh (attribute) -> phong ngu
+    private int bedRoom; // instance - thuoc tinh cua lop (attribute) -> phong ngu
     private int floor; // thuoc tinh --> so tang
+    public static int x; //static variable
 
 
     //ko co ham khoi tao
     //mac dinh Java se add 1 ham khoi tao ko tham so
     House() {
+        super(); // goi GeneralHouse()
         bedRoom = 1;
         floor = 2;
+    }
+
+    House(int nobedRoom, int nofloor, String color) {
+        this(nobedRoom, nofloor); // House(int nobedRoom, int nofloor)
+        this.color = color;
     }
 
     House(int nobedRoom, int nofloor) {
@@ -37,4 +44,14 @@ public class House {
         return floor;
     }
 
+    //override: hàm cùng tên với cha
+    public void display() {
+        super.display();
+        System.out.println("Bedroom: " + bedRoom);
+        System.out.println("Floor: " + floor);
+    }
+
+    public void printLocation() {
+        System.out.println(location);
+    }
 }
