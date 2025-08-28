@@ -26,6 +26,13 @@ public class DemoConstructorHouse {
         System.out.println(house2.x); // 2
 
         String s = House.location; //static goi dc Class.method
+        String t = house1.location; // Do chỗ này Intellij ko suggest code nên gõ ko thấy show location vì nó muốn class gọi thay vì object
+                                    // Nghĩa là bạn có thể gọi thông qua house1.location,
+                                    // nhưng Java khuyến nghị phải gọi qua class
+                                    // dòng code dó warning màu vàng nhưng vẫn chạy được
+        System.out.println("-----------");
+        System.out.println(s); // print ra HCM
+        System.out.println(t); // print ra HCM
 
 
     }
